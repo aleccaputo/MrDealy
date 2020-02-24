@@ -20,7 +20,12 @@ public class BeanBehavior : MonoBehaviour
     {
         if (collider.gameObject.name == "Mr Dealy")
         {
-            BeanScoreBehavior.scoreValue += 4;
+            if(BeanScoreBehavior.scoreValue == 0)
+            {
+                BeanScoreBehavior.scoreValue = 4;
+            }
+            
+            BeanScoreBehavior.scoreValue += 1;
             Destroy(gameObject);
         }
     }
